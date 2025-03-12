@@ -1,0 +1,337 @@
+{%extends 'base.html'%} {%block body%}
+<section id="hero" class="container-body">
+  <div class="col1 flex column">
+    <h1>
+      Sabor que<br />
+      Aconchega.
+    </h1>
+    <h3>Com carinho, amor e açúcar.</h3>
+    <div class="button-hero flex">
+      <button><a href="#escolhas">ESCOLHER</a></button
+      ><button><a href="">NOSSOS PRODUTOS</a></button>
+    </div>
+  </div>
+  <div class="col2 flex">
+    <div class="box">
+      <ul class="flex column">
+        <li>
+          <img
+            src="{{url_for('static', filename='assets/coockie1.png')}}"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            class="paralaxBoxMid"
+            src="{{url_for('static', filename='assets/coockie2.webp')}}"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="{{url_for('static', filename='assets/coockie3.png')}}"
+            alt=""
+          />
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section id="anuncios" class="center column container-body">
+  <h2>Novidades e anúncios</h2>
+  <p>Novidades sobre os produtos</p>
+  <div class="slider-container">
+    <div class="slider flex">
+      <div class="slide">
+        <a href="" class="remove center">
+          <i class="bx bxs-trash-alt"></i>
+        </a>
+        <img src="../static/assets/Design sem nome.png" alt="Imagem 3" />
+      </div>
+    </div>
+    <p class="add center" id="add">
+      <i class="bx bx-plus"></i>
+    </p>
+    <button class="prev center">
+      <i class="bx bx-chevron-left"></i>
+    </button>
+    <button class="next center">
+      <i class="bx bx-chevron-right"></i>
+    </button>
+  </div>
+</section>
+<section id="escolhas" class="flex column container-body">
+  <div class="headerSabor column flex align-center">
+    <h2>Faça seu pedido</h2>
+    <p>Escolha quantos quiser, o total já é calculado automaticamente.</p>
+  </div>
+  <div class="escolhasBody align-center grid" id="produtos-container">
+    <div class="boxCookie flex column" data-id="">
+      <div class="header flex">
+        <img src="../static/assets/coockie8.png" alt="" />
+        <div class="boxAvaliation center">
+          <i class="bx bxs-star"></i>
+          <div class="avaliation">1/5</div>
+        </div>
+      </div>
+      <div class="title">
+        <h3>Bolinho de banana</h3>
+        <p>
+          Bolinho de banana, sabor banana, cobertura de banana, recheado com
+          banana, confeitos de banana em formato de banana
+        </p>
+      </div>
+      <div class="valor flex align-center">
+        <div class="buttons flex align-center">
+          <button
+            onclick="atualizarCarrinho(1)"
+            class="cakeButton moreCookie center"
+          >
+            <i class="bx bx-plus"></i>
+          </button>
+          <div class="valorProduto" id="quantidade">0</div>
+          <button
+            onclick="atualizarCarrinho(-1)"
+            class="cakeButton lessCookie center"
+          >
+            <i class="bx bx-minus"></i>
+          </button>
+        </div>
+        <div id="value" class="valuePromotion center">
+          <p class="preco">R$ 5</p>
+        </div>
+      </div>
+    </div>
+    <div class="boxCookie flex column" data-id="">
+      <div class="header flex">
+        <img src="../static/assets/coockie8.png" alt="" />
+        <div class="boxAvaliation center">
+          <i class="bx bxs-star"></i>
+          <div class="avaliation">1/5</div>
+        </div>
+      </div>
+      <div class="title">
+        <h3>Bolinho de banana</h3>
+        <p>
+          Bolinho de banana, sabor banana, cobertura de banana, recheado com
+          banana, confeitos de banana em formato de banana
+        </p>
+      </div>
+      <div class="valor flex align-center">
+        <div class="buttons flex align-center">
+          <button
+            onclick="atualizarCarrinho(1)"
+            class="cakeButton moreCookie center"
+          >
+            <i class="bx bx-plus"></i>
+          </button>
+          <div class="valorProduto" id="quantidade">0</div>
+          <button
+            onclick="atualizarCarrinho(-1)"
+            class="cakeButton lessCookie center"
+          >
+            <i class="bx bx-minus"></i>
+          </button>
+        </div>
+        <div id="value" class="valuePromotion center">
+          <p class="preco">R$ 5</p>
+        </div>
+      </div>
+    </div>
+    <div class="boxCookie flex column" data-id="">
+      <div class="header flex">
+        <img src="../static/assets/coockie8.png" alt="" />
+        <div class="boxAvaliation center">
+          <i class="bx bxs-star"></i>
+          <div class="avaliation">1/5</div>
+        </div>
+      </div>
+      <div class="title">
+        <h3>Bolinho de banana</h3>
+        <p>
+          Bolinho de banana, sabor banana, cobertura de banana, recheado com
+          banana, confeitos de banana em formato de banana
+        </p>
+      </div>
+      <div class="valor flex align-center">
+        <div class="buttons flex align-center">
+          <button
+            onclick="atualizarCarrinho(1)"
+            class="cakeButton moreCookie center"
+          >
+            <i class="bx bx-plus"></i>
+          </button>
+          <div class="valorProduto" id="quantidade">0</div>
+          <button
+            onclick="atualizarCarrinho(-1)"
+            class="cakeButton lessCookie center"
+          >
+            <i class="bx bx-minus"></i>
+          </button>
+        </div>
+        <div id="value" class="valuePromotion center">
+          <p class="preco">R$ 5</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="totalPedido flex justify-center">
+    <a href="" class="center" id="redirectPay" class="disabled">
+      <div id="total-geral">R$ 90</div>
+      |
+      <div>Detalhes</div>
+    </a>
+  </div>
+</section>
+<section id="resenhas" class="container-body column align-center">
+  <div class="header flex align-center column">
+    <h2>Oque nossos clientes dizem</h2>
+    <p>Avaliações públicas</p>
+  </div>
+  <div class="carrossel flex column align-center row">
+    <div class="sub" id="sub"><i class="bx bx-chevron-left"></i></div>
+    <ul class="flex row align-center">
+      <li class="resenha">
+        <div class="flex row align-center">
+          <img src="../static/assets/perfil.svg" alt="" />
+          <div class="usuario">
+            <h4>Luidy M. Silva 1</h4>
+            <div class="stars">
+              <ul class="flex">
+                <li><i class="bx bxs-star"></i></li>
+                <li><i class="bx bxs-star"></i></li>
+                <li><i class="bx bxs-star"></i></li>
+                <li><i class="bx bxs-star"></i></li>
+                <li><i class="bx bxs-star"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="avaliacao">
+          <p>
+            A expressão Lorem ipsum em design gráfico e editoração é um texto
+            padrão em latim utilizado na produção gráfica para preencher os
+            espaços de texto em publicações para testar e ajustar aspectos
+            visuais antes de utilizar conteúdo real
+          </p>
+        </div>
+      </li>
+      <li class="resenha">
+        <div class="flex row align-center">
+          <img src="../static/assets/perfil.svg" alt="" />
+          <div class="usuario">
+            <h4>Luidy M. Silva 2</h4>
+            <div class="stars">
+              <ul class="flex">
+                <li><i class="bx bxs-star"></i></li>
+                <li><i class="bx bxs-star"></i></li>
+                <li><i class="bx bxs-star"></i></li>
+                <li><i class="bx bxs-star"></i></li>
+                <li><i class="bx bxs-star"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="avaliacao">
+          <p>
+            A expressão Lorem ipsum em design gráfico e editoração é um texto
+            padrão em latim utilizado na produção gráfica para preencher os
+            espaços de texto em publicações para testar e ajustar aspectos
+            visuais antes de utilizar conteúdo real
+          </p>
+        </div>
+      </li>
+      <li class="resenha">
+        <div class="flex row align-center">
+          <img src="../static/assets/perfil.svg" alt="" />
+          <div class="usuario">
+            <h4>Luidy M. Silva 3</h4>
+            <div class="stars">
+              <ul class="flex">
+                <li><i class="bx bxs-star"></i></li>
+                <li><i class="bx bxs-star"></i></li>
+                <li><i class="bx bxs-star"></i></li>
+                <li><i class="bx bxs-star"></i></li>
+                <li><i class="bx bxs-star"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="avaliacao">
+          <p>
+            A expressão Lorem ipsum em design gráfico e editoração é um texto
+            padrão em latim utilizado na produção gráfica para preencher os
+            espaços de texto em publicações para testar e ajustar aspectos
+            visuais antes de utilizar conteúdo real
+          </p>
+        </div>
+      </li>
+    </ul>
+    <div class="next" id="next"><i class="bx bx-chevron-right"></i></div>
+  </div>
+</section>
+<section id="sobre" class="container-body flex center column">
+  <h2>Um pouco sobre nós</h2>
+  <p>E sobre os cookies</p>
+  <ul class="flex align-center">
+    <li class="flex align-center column">
+      <img src="../static/assets/cookie-removebg-preview (3).png" alt="" />
+      <p>
+        Cada receita é pensada para proporcionar uma experiência única. Dos
+        clássicos aos sabores mais inovadores, cada cookie é uma combinação
+        perfeita de textura, aroma e sabor. Com ingredientes selecionados e um
+        toque especial, transformamos cada mordida em um momento inesquecível.
+      </p>
+    </li>
+    <li class="flex align-center column">
+      <img src="../static/assets/coracao-removebg-preview.png" alt="" />
+      <p>
+        A paixão pela confeitaria nos inspira a criar receitas que encantam em
+        cada detalhe. Com dedicação e carinho, combinamos ingredientes de
+        qualidade para entregar cookies irresistíveis. Nosso compromisso vai
+        além do sabor: buscamos a total satisfação dos nossos clientes,
+        proporcionando momentos doces e inesquecíveis a cada mordida.
+      </p>
+    </li>
+    <li class="flex align-center column">
+      <img src="../static/assets/trigo-removebg-preview.png" alt="" />
+      <p>
+        Nosso compromisso com a saúde dos clientes começa na escolha dos
+        ingredientes. Utilizamos farinhas de alta qualidade, chocolates puros e
+        adoçantes equilibrados, garantindo cookies saborosos e nutritivos. Cada
+        receita é pensada para oferecer uma experiência deliciosa sem abrir mão
+        do bem-estar, proporcionando mais leveza e qualidade em cada mordida.
+      </p>
+    </li>
+  </ul>
+</section>
+<script>
+  const prev = document.getElementById("sub"); // Botão Anterior
+  const next = document.getElementById("next"); // Botão Próximo
+  const carrossel = document.querySelector(".carrossel ul");
+
+  // Converte NodeList em Array para manipulação
+  const resenhas = Array.from(document.querySelectorAll(".resenha"));
+
+  next.addEventListener("click", () => {
+    const lastItem = resenhas.pop(); // Remove o último item
+    resenhas.unshift(lastItem); // Adiciona ele no início
+
+    atualizarCarrossel();
+  });
+
+  prev.addEventListener("click", () => {
+    const firstItem = resenhas.shift(); // Remove o primeiro item
+    resenhas.push(firstItem); // Adiciona ele no final
+
+    atualizarCarrossel();
+  });
+
+  function atualizarCarrossel() {
+    carrossel.innerHTML = ""; // Limpa a lista
+    resenhas.forEach((item) => carrossel.appendChild(item)); // Reinsere os itens na nova ordem
+  }
+</script>
+<script src="{{url_for('static', filename='js/' ~ 'animacaoHome.js')}}"></script>
+
+{%endblock%}
