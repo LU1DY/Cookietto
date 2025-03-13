@@ -1020,6 +1020,177 @@ footer {
     }
   }
 }
+
+#cadastrar {
+  & .col1 {
+    width: 55rem;
+    align-items: baseline;
+    margin-top: 4rem;
+    & .header {
+      align-items: baseline;
+      & h1 {
+        font-size: 5rem;
+        letter-spacing: -0.8px;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: -3.5px;
+      }
+      & p {
+        font-size: 1.6rem;
+        color: #0c0c0c;
+        font-weight: 500;
+        margin-bottom: 3rem;
+        text-align: justify;
+      }
+    }
+    & form {
+      & .row {
+        justify-content: space-between;
+        & .divInput {
+          width: 27rem;
+        }
+      }
+      & .divInput {
+        border-radius: 2rem;
+        border: 1px solid #939393;
+        font-size: 1.6rem;
+        width: 55.5rem;
+        margin-bottom: 3rem;
+        outline: none;
+        color: #0c0c0c;
+        justify-content: space-between;
+        position: relative;
+        transition: 200ms ease;
+        &:focus-within {
+          border: 1px solid #badae7ae;
+          background-color: transparent;
+          box-shadow: 0px 0px 3px 3px #badae7ae;
+        }
+        & .errorJS {
+          position: absolute;
+          top: 4rem;
+          left: 2rem;
+          color: #ff0000;
+        }
+        & input {
+          border: none;
+          width: 45rem;
+          border-radius: 2rem;
+          padding: 1rem;
+          font-size: 1.6rem;
+          outline: none;
+          color: #0c0c0c;
+          background-color: transparent;
+        }
+        & #togglePassword {
+          margin-right: 1rem;
+          & svg {
+            cursor: pointer;
+          }
+        }
+        & #togglePasswordConfirm {
+          margin-right: 1rem;
+
+          & svg {
+            cursor: pointer;
+          }
+        }
+
+        & .errorJS {
+          position: absolute;
+          top: 4rem;
+          left: 2rem;
+          font-size: 1.5rem;
+          font-weight: 500;
+          column-gap: 0.5rem;
+          color: #ff0000;
+          & svg {
+            fill: #ff0000;
+          }
+        }
+      }
+      & .submitResquest {
+        width: 100%;
+        & .requestPassword {
+          font-size: 1.6rem;
+          font-weight: 500;
+          width: 100%;
+          justify-content: space-between;
+          & a {
+            text-decoration: none;
+            color: inherit;
+          }
+        }
+        & #btn_submit_login,
+        & #btn_submit_criar_conta {
+          border: none;
+          color: white;
+          background-color: #0c0c0c;
+          font-size: 2rem;
+          font-weight: 900;
+          text-transform: uppercase;
+          font-family: "Montserrat", sans-serif;
+          padding: 1rem 2rem;
+          border-radius: 3rem;
+          margin-top: 2rem;
+          margin-bottom: 4rem;
+          width: max-content;
+        }
+      }
+    }
+    & .other {
+      & .continue {
+        column-gap: 2rem;
+        margin-bottom: 3rem;
+        & p {
+          font-size: 1.6rem;
+          margin-bottom: 0.5rem;
+          text-wrap: nowrap;
+          font-weight: 500;
+        }
+        & hr {
+          width: 18.8rem;
+          height: 1px;
+          color: #656565;
+          background-color: #656565;
+        }
+        & span {
+          font-size: 1.8rem;
+          text-wrap: nowrap;
+          font-weight: 500;
+          margin-bottom: 0.5rem;
+        }
+      }
+      & ul {
+        list-style: none;
+        display: flex;
+        column-gap: 5rem;
+        & li {
+          background-color: #000;
+          border-radius: 50rem;
+          width: 6rem;
+          height: 6rem;
+          & i {
+            font-size: 3rem;
+            color: #fff;
+          }
+        }
+      }
+    }
+    & .createCount {
+      margin-top: 3rem;
+      align-self: center;
+      & h4 {
+        font-size: 1.6rem;
+        font-weight: 600;
+        & a {
+          color: #62875a !important;
+        }
+      }
+    }
+  }
+}
+
 .none {
   display: none !important;
 }
