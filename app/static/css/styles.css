@@ -1022,6 +1022,8 @@ footer {
 }
 
 #cadastrar {
+  margin: 2rem 0;
+  width: 100%;
   & .col1 {
     width: 55rem;
     align-items: baseline;
@@ -1058,6 +1060,8 @@ footer {
         margin-bottom: 3rem;
         outline: none;
         color: #0c0c0c;
+        display: flex;
+        align-items: center;
         justify-content: space-between;
         position: relative;
         transition: 200ms ease;
@@ -1083,6 +1087,9 @@ footer {
           background-color: transparent;
         }
         & #togglePassword {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           margin-right: 1rem;
           & svg {
             cursor: pointer;
@@ -1163,7 +1170,6 @@ footer {
       }
       & ul {
         list-style: none;
-        display: flex;
         column-gap: 5rem;
         & li {
           background-color: #000;

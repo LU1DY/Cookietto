@@ -1,5 +1,4 @@
-{% extends 'base.html' %}{%block body%} {%include 'navbar.html'%}
-
+{% extends 'base.html' %} {%block body%}
 <section id="cadastrar" class="center container-body">
   <div class="col1 flex column justify-center">
     <div class="header flex column justify-center">
@@ -7,10 +6,10 @@
       <p>Comece agora, cadastre-se abaixo!</p>
     </div>
     <form method="POST" action="">
-      <div class="row flex align-center">
+      <div class="row flex center">
         <div class="divInput flex align-center">
           <input type="text" id="username" placeholder="Seu nome..." />
-          <div class="errorJS center"></div>
+          <div class="errorJS"></div>
         </div>
         <div class="divInput flex align-center">
           <input
@@ -19,14 +18,14 @@
             placeholder="Seu
           e-mail..."
           />
-          <div class="errorJS center"></div>
+          <div class="errorJS"></div>
         </div>
       </div>
-      <div class="divInput flex align-center">
+      <div class="divInput">
         <input type="password" id="password" placeholder="Sua senha..." />
-        <div class="errorJS center"></div>
+        <div class="errorJS"></div>
 
-        <div id="togglePassword ">
+        <div id="togglePassword">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="26px"
@@ -54,15 +53,15 @@
           </svg>
         </div>
       </div>
-      <div class="divInput flex align-center">
+      <div class="divInput">
         <input
           type="password"
           id="confirmPassword"
           placeholder="Confirme sua senha..."
         />
-        <div class="errorJS center"></div>
+        <div class="errorJS"></div>
 
-        <div id="togglePasswordConfirm center">
+        <div id="togglePasswordConfirm">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="26px"
