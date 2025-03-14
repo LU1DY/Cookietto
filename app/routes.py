@@ -13,3 +13,9 @@ def login():
     verSenha = {'js': 'versenha.js'}
     validarSenha = {'js': 'validarSenha.js'}
     return render_template('login.html', validarSenha=validarSenha, verSenha=verSenha)
+
+@app.route('/cadastrar')
+def cadastrar():
+    verSenhaCadastrar = {'js': 'verSenhaCadastrar.js'}
+    validarSenhaCadastrar = {'js': 'validarSenhaCadastrar.js'}
+    return render_template('cadastrar.html', validarSenhaCadastrar=validarSenhaCadastrar, verSenhaCadastrar=verSenhaCadastrar)
